@@ -1,0 +1,3 @@
+ansible all -m ping (Ping all machine IP's)
+ansible -m ping host1 (Ping particular host)
+ansible-playbook filename.yaml
