@@ -1,0 +1,11 @@
+---
+- name: Delete infra components
+  hosts: web
+  tasks:
+    - name: Uninstall git
+      yum:
+         name: git
+         state: absent
+      when:
+       - ansible_os_family == "RedHat"
+       - ansible_distribution == "CentOS"
