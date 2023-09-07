@@ -9,3 +9,11 @@
       when:
        - ansible_os_family == "RedHat"
        - ansible_distribution == "CentOS"
+
+- name: Uninstall java component
+  hosts: web
+  tasks:
+    - name: Uninstall java
+      yum:
+         name: java-11-openjdk-headless
+         state: absent
